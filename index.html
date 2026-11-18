@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Axis5 Case Study · Samarjitsinh Waghela</title>
+<meta name="description" content="How Axis5 closes the gap between design and manufacturing, from the first sketch. A case study by Samarjitsinh Waghela.">
+<meta property="og:title" content="Axis5: from a first sketch to a manufacturing decision">
+<meta property="og:description" content="A case study by Samarjitsinh Waghela: nine steps from brief to quotation, real Yulu evidence, and what is still unproven.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#0e1114">
+<style>html{-webkit-text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: the case study as a set of drawing sheets. Each section opens with a title-block strip
+   (sheet no. · title · scale), dimension lines carry the timing claims, one red-orange "markup" accent
+   taken from Samarjit's CV marks what matters. Wide sheet column, condensed engineered display type. */
+:root{
+  --paper:#0e1114; --sheet:#151a1f; --ink:#e8ecf0; --muted:#97a1ac; --rule:#29313a; --grid:#1c232a;
+  --mark:#ff6b3d; --mark-soft:rgba(255,107,61,.13); --shade:rgba(8,10,12,.86); --canvas:#ffffff; --on-shade:#e8ecf0;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);font-stretch:100%;
+  -webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;}
+.wrap{max-width:1160px;margin:0 auto}
+a{color:inherit;text-decoration-color:var(--mark);text-underline-offset:3px}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-stretch:68%;font-weight:850;font-size:clamp(46px,8.4vw,104px);line-height:.92;text-transform:uppercase}
+h2{font-stretch:72%;font-weight:800;font-size:clamp(32px,4.6vw,52px);line-height:1;text-transform:uppercase}
+h3{font-stretch:85%;font-weight:700;font-size:22px;line-height:1.2}
+p{margin:0}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.55;max-width:62ch}
+.prose{max-width:66ch;display:grid;gap:14px}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.mark{color:var(--mark)}
+.small{font-size:14px}
+
+/* sheet + title block */
+.sheet{background:var(--sheet);border:1px solid var(--rule);margin-block:28px;position:relative}
+.tb{display:grid;grid-template-columns:auto 1fr auto;border-bottom:1px solid var(--rule)}
+.tb>div{padding:9px 16px;border-right:1px solid var(--rule);font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.tb>div:last-child{border-right:0}
+.tb .no{color:var(--mark);font-weight:500}
+.tb .t{color:var(--ink);overflow:hidden;text-overflow:ellipsis}
+.in{padding:clamp(22px,4vw,48px);display:grid;gap:28px}
+.in>*{min-width:0}
+
+/* hero */
+.hero .in{gap:34px;padding-top:clamp(28px,5vw,60px)}
+.for{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mark);border:1px solid var(--mark);justify-self:start;padding:6px 12px}
+.who{display:flex;flex-wrap:wrap;gap:8px 22px}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.frame{margin:0;display:grid;gap:8px;align-content:start}
+.frame .ph{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--rule);background:var(--paper)}
+.frame .ph img{width:100%;height:100%;object-fit:cover;object-position:center}
+.ph.ba{position:relative}
+.ba span{position:absolute;left:8px;top:1%;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--sheet);color:var(--muted);padding:1px 6px}
+.ba span+span{top:51%;color:var(--mark)}
+.frame figcaption{display:grid;gap:2px;line-height:1.35}
+.frame figcaption .mono:first-child{color:var(--ink);font-weight:500}
+.dim{position:relative;height:30px;margin-top:4px}
+.dim::before{content:"";position:absolute;left:0;right:0;top:14px;border-top:1px solid var(--mark)}
+.dim::after{content:"";position:absolute;left:0;right:0;top:8px;height:13px;border-left:1px solid var(--mark);border-right:1px solid var(--mark)}
+.dim span{position:absolute;left:50%;top:2px;transform:translateX(-50%);background:var(--sheet);padding:0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mark);white-space:nowrap}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule)}
+.facts>div{padding:16px 16px 4px 0;display:grid;gap:4px;align-content:start}
+.facts b{font-family:var(--display);font-stretch:70%;font-weight:800;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+
+/* journey */
+.journey{display:grid;grid-template-columns:1fr 1.25fr 1fr;border:1px solid var(--rule)}
+.stage{padding:20px;display:grid;gap:12px;align-content:start;border-right:1px solid var(--rule)}
+.stage:last-child{border-right:0}
+.stage.hot{background:var(--mark-soft);outline:2px solid var(--mark);outline-offset:-2px}
+.stage ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.stage li{border:1px solid var(--rule);background:var(--sheet);padding:7px 10px;font-size:15px;display:flex;gap:10px;align-items:baseline}
+.stage li i{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--mark)}
+.stage .note{font-size:13.5px}
+
+/* split rows */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,4vw,48px);align-items:start}
+.split>*{min-width:0}
+.quote{border-left:3px solid var(--mark);padding:4px 0 4px 18px;font-family:var(--display);font-stretch:80%;font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+ol.loop{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
+ol.loop li{counter-increment:s;position:relative;padding-left:34px}
+ol.loop li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:.2em;font-family:var(--mono);font-size:12px;color:var(--mark)}
+ol.loop li:last-child::before{content:"↺"}
+
+/* decision cards */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{border:1px solid var(--rule);padding:18px;display:grid;gap:8px;align-content:start;background:var(--sheet)}
+.card .mono{color:var(--mark)}
+
+/* nine steps */
+.feat{display:grid;align-items:center;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);gap:clamp(18px,3.5vw,40px);padding-block:30px;border-top:1px solid var(--rule)}
+.feat:first-of-type{border-top:0;padding-top:0}
+.feat:nth-of-type(even){grid-template-columns:minmax(0,1.5fr) minmax(0,.85fr)}
+.feat:nth-of-type(even) .ftext{order:2}
+.ftext{display:grid;gap:12px;align-content:start}
+.ftext .idx{font-family:var(--mono);font-size:12px;color:var(--mark);letter-spacing:.08em}
+dl.wwv{margin:0;display:grid;gap:10px}
+dl.wwv dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+dl.wwv .need-dt{color:var(--mark)}
+dl.wwv .need-dd{color:var(--ink);font-weight:500}
+dl.wwv dd{margin:0;font-size:15.5px;line-height:1.55}
+.ex{border-left:2px solid var(--mark);padding-left:14px;font-size:15px;line-height:1.55}
+.ex b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mark);font-weight:500;display:block}
+.shot{margin:0;display:grid;gap:6px;align-content:start}
+.shot button{all:unset;cursor:zoom-in;display:block;border:1px solid var(--rule);background:var(--paper)}
+.shot button.pair{position:relative;background:var(--canvas)}
+.shot .lbl{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--sheet);color:var(--muted);padding:3px 8px}
+.shot .lbl.r{left:calc(50% + 10px);color:var(--mark)}
+.shot button:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.shot figcaption{font-size:13px;color:var(--muted);line-height:1.45}
+.stat{display:inline-flex;flex-wrap:wrap;gap:6px;align-items:baseline;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stat b{font-family:var(--display);font-stretch:75%;font-size:22px;color:var(--ink)}
+
+/* sessions */
+.steps{width:100%;border-collapse:collapse;font-size:15px}
+.steps th,.steps td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.steps th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.steps td:first-child{font-weight:600;white-space:nowrap}
+.tablebox{overflow-x:auto}
+.filmstrip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.filmstrip.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* tools: each tile opens the tool's write-up */
+.tools{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tool{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--rule);display:grid;grid-template-rows:auto 1fr;background:var(--sheet);text-align:left;min-width:0}
+.tool:hover{border-color:var(--mark)}
+.tool:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.tool .tthumb{position:relative;display:block;aspect-ratio:16/10;max-width:100%;overflow:hidden;border-bottom:1px solid var(--rule);background:var(--paper)}
+.tool .xp{position:absolute;top:8px;right:8px;z-index:1;display:grid;place-items:center;width:28px;height:28px;border-radius:6px;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);opacity:.85;transition:opacity .2s,color .2s,border-color .2s}
+.tool:hover .xp,.tool:focus-visible .xp{opacity:1;color:var(--mark);border-color:var(--mark)}
+.tool .tthumb img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.tool .tthumb.fit{background:var(--canvas)}
+.tool .tthumb.fit img{object-fit:contain;object-position:center}
+.tool .tbody{padding:14px;display:grid;gap:6px;align-content:start}
+.tool .h,.cap .h{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:18px;line-height:1.2}
+.tool .p,.cap .p{display:block;font-size:14px;line-height:1.5}
+.tool .why{color:var(--muted)}
+.tool .more{color:var(--mark);font-size:11px;margin-top:4px}
+.cap{grid-column:span 1;border:1px solid var(--mark);background:var(--mark-soft);padding:18px;display:grid;gap:6px;align-content:center}
+.readmore{all:unset;cursor:pointer;justify-self:start;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mark);border-bottom:1px solid var(--mark)}
+.readmore:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
+#tooldlg{background:var(--sheet);color:var(--ink);border:1px solid var(--rule);width:min(1100px,94vw);max-width:94vw;max-height:90vh;overflow:auto;padding:0}
+#tooldlg::backdrop{background:var(--shade)}
+.dlg-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 24px;background:var(--sheet);border-bottom:1px solid var(--rule)}
+.dlg-x{all:unset;cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dlg-x:hover{color:var(--mark)}
+.dlg-x:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
+.dlg-body{padding:22px 24px 30px;display:grid;gap:18px}
+.dlg-body h3{font-size:clamp(24px,3vw,32px)}
+
+/* sessions: storyboard of five steps */
+.session{display:grid;gap:16px;border-top:1px solid var(--rule);padding-top:26px}
+.story{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.scard{display:grid;gap:8px;align-content:start;min-width:0}
+.scard .shot button{aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.scard .shot img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.scard p:last-child{font-size:14px;line-height:1.5}
+
+/* hero video link */
+.watch{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--mark);padding:9px 14px}
+.watch .play{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--mark);color:var(--sheet);font-size:9px;padding-left:2px}
+.watch:hover{background:var(--mark-soft)}
+.watch:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
+.twin-card{grid-column:1/-1;order:3;border:1px solid var(--mark);background:var(--mark-soft);border-radius:10px;padding:20px 24px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:12px 32px;align-items:center}
+.tc-head,.tc-body{display:grid;gap:8px;align-content:center;min-width:0}
+.twin-card .pill{justify-self:start;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--mark);color:var(--sheet);padding:3px 10px;border-radius:99px}
+.twin-card h4{margin:0;font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.1}
+.twin-card p{font-size:15px;line-height:1.55}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* wide step: text across the top, two screens side by side below */
+.feat.wide,.feat.wide:nth-of-type(even){grid-template-columns:minmax(0,1fr)}
+.feat.wide .ftext{order:0}
+.wide-text{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(18px,3.5vw,40px);align-items:end}
+.wide-text>div{display:grid;gap:12px;align-content:start;min-width:0}
+.pair-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.pair-row .shot button{aspect-ratio:3/2;max-width:100%;overflow:hidden}
+.pair-row .shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+
+.pair-row.dfm{grid-template-columns:minmax(0,2.21fr) minmax(0,1.47fr)}
+.pair-row.dfm .shot button{aspect-ratio:auto}
+.pair-row.dfm .shot img{height:auto}
+.pair-row.q{grid-template-columns:minmax(0,.62fr) minmax(0,1.6fr);align-items:center}
+.pair-row.q .shot button{aspect-ratio:auto}
+.pair-row.q .shot img{height:auto}
+.pair-row figcaption b{color:var(--ink);font-weight:600}
+
+.next-h{display:grid;gap:4px;border-top:1px solid var(--rule);padding-top:24px}
+.next-h h3{font-size:24px}
+
+/* how I work */
+.habits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.habit{border-top:2px solid var(--mark);padding-top:14px;display:grid;gap:8px;align-content:start;min-width:0}
+.habit h3{font-size:21px}
+.habit>p:not(.mono):not(.seen){font-size:15.5px;line-height:1.55}
+.seen{font-size:13.5px;line-height:1.5;color:var(--muted);display:grid;gap:3px}
+.seen .mono{font-size:10.5px;color:var(--muted)}
+.seen .jump a{color:var(--mark);text-decoration:none;border-bottom:1px solid var(--mark)}
+.seen .jump{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--mark)}
+
+/* diagrams: drawn in SVG, coloured from the theme tokens */
+.diagram{margin:0;display:grid;gap:8px;min-width:0}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:680px;height:auto}
+.dg text{font-family:var(--mono);font-size:12px;fill:var(--muted)}
+.dg .cap{font-size:11px;letter-spacing:.08em}
+.dg .ink{fill:var(--ink)}
+.dg .mk{fill:var(--mark)}
+.dg .strong{font-weight:500;font-size:12.5px}
+.dg .cbar{fill:var(--grid);stroke:var(--rule)}
+.dg .cbar.hot{fill:var(--mark-soft);stroke:var(--mark)}
+.dg .line{stroke:var(--muted);stroke-width:1.6;fill:none}
+.dg .tick{stroke:var(--mark);stroke-width:1.6}
+.dg .loop{stroke:var(--mark);stroke-width:2;fill:none;stroke-dasharray:6 5}
+.dg .node{fill:var(--sheet);stroke:var(--muted);stroke-width:2}
+.dg .node.hot{fill:var(--mark);stroke:var(--mark)}
+.dg .box{fill:var(--sheet);stroke:var(--rule);stroke-width:1.2}
+.dg .box.bad{fill:var(--mark-soft);stroke:var(--mark)}
+.dg .box.good{fill:var(--mark-soft);stroke:var(--mark);stroke-width:2}
+.dg .ahm{fill:var(--muted)}
+.dg .ahm-mk{fill:var(--mark)}
+.dfm-story{grid-column:1/-1;order:3;border-top:1px solid var(--rule);padding-top:18px}
+
+.costs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px 32px;align-items:start;border:1px solid var(--rule);background:var(--sheet);padding:20px 22px}
+.costs-head{display:grid;gap:8px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1px solid var(--rule);background:var(--sheet);padding:6px 12px;font-size:14px;border-radius:99px}
+
+/* decision log */
+.calls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.call{border:1px solid var(--rule);background:var(--sheet);padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.call h3{font-size:20px}
+.call dl.wwv dd{font-size:14.5px}
+
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;border-top:1px solid var(--rule);padding-top:20px}
+.rules>p{grid-column:1/-1}
+.rules>div{display:grid;gap:6px;align-content:start}
+.rules h3{font-size:18px}
+.rules div p{font-size:14.5px;line-height:1.55;color:var(--muted)}
+
+/* career timeline: a horizontal strip, wraps on narrow screens */
+.role{display:grid;gap:22px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:14px;position:relative}
+.timeline::before{content:"";position:absolute;left:5px;right:5px;top:5px;border-top:2px solid var(--rule)}
+.timeline li{position:relative;padding-top:22px;display:grid;gap:3px;align-content:start;font-size:13px;line-height:1.4;color:var(--muted);min-width:0}
+.timeline li::before{content:"";position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:var(--sheet);border:2px solid var(--muted)}
+.timeline li.now::before{background:var(--mark);border-color:var(--mark)}
+.timeline .mono{color:var(--mark);font-size:10.5px}
+.timeline b{color:var(--ink);font-weight:600;font-size:14px;line-height:1.3}
+.probs{display:grid;gap:10px;align-content:start}
+.prob{border:1px solid var(--rule);border-left:3px solid var(--mark);background:var(--sheet);padding:12px 16px;display:grid;gap:4px}
+.prob h3{font-size:17px}
+.prob p{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.probs-end{font-size:15px;font-weight:600}
+
+/* spec box */
+.spec{display:grid;gap:12px;border-top:1px solid var(--rule);padding-top:22px}
+.specs{margin:0;display:grid;border-top:1px solid var(--rule)}
+.specs>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding-block:10px;border-bottom:1px solid var(--rule)}
+.specs dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.specs dd{margin:0;font-size:15px;line-height:1.55}
+
+/* launch video */
+.film{margin:0;display:grid;gap:8px}
+.film video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--rule)}
+
+/* closing summary */
+.sum3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--rule);padding-top:22px}
+.sum3>div{display:grid;gap:8px;align-content:start}
+.sum3 .mono{color:var(--mark)}
+
+/* evidence */
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.chart .lbl{fill:var(--ink);font-size:12px}
+.uses{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.uses th,.uses td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:right}
+.uses th:first-child,.uses td:first-child{text-align:left}
+.uses th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.uses tr.low td{color:var(--muted)}
+.bar{display:inline-block;height:8px;background:var(--mark);vertical-align:middle;margin-left:8px;opacity:.8}
+/* a tick or dash hangs in the left margin; the item's text (bold lead included) flows as one paragraph */
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.checks li{position:relative;padding-left:28px}
+.checks li::before{position:absolute;left:0;top:0;font-family:var(--mono);font-weight:500}
+.yes li::before{content:"✓";color:var(--ink)}
+.no li::before{content:"–";color:var(--mark)}
+
+/* learned */
+.learn{display:grid;border-top:1px solid var(--rule)}
+.lrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:16px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.55}
+.lrow>span{min-width:0}
+.lrow.h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-block:12px}
+.lrow.key{background:var(--mark-soft);border-left:3px solid var(--mark);margin-inline:-16px;padding-inline:13px 16px;margin-top:-1px}
+.lrow.key>span:first-child{font-weight:600}
+
+footer{padding-block:20px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* spotlight */
+.ba-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ba-pair .shot button{background:var(--sheet);aspect-ratio:1/1;overflow:hidden}
+.ba-pair .shot button img{width:100%;height:100%;object-fit:contain;background:var(--canvas)}
+.ba-pair figcaption{font-size:14px}
+.ba-pair figcaption b{display:block;font-weight:500;margin-bottom:2px}
+.shots-col{display:grid;gap:14px;align-content:start}
+
+/* appendix */
+.apx{border-top:1px solid var(--rule)}
+.apx:last-child{border-bottom:1px solid var(--rule)}
+.apx summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:16px;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:20px;line-height:1.25}
+.apx summary::-webkit-details-marker{display:none}
+.apx summary::after{content:"+";font-family:var(--mono);font-weight:500;color:var(--mark)}
+.apx[open] summary::after{content:"\2013"}
+.apx summary:hover{color:var(--mark)}
+.apx summary:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.apx-body{display:grid;align-items:start;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(18px,3.5vw,40px);padding-bottom:28px;font-size:15.5px;line-height:1.6}
+.apx-body>*{min-width:0}
+.apx-shots{display:grid;gap:14px;align-content:start}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,1600px);max-height:94vh}
+dialog::backdrop{background:var(--shade)}
+#lb img{max-height:88vh;width:auto;border:1px solid var(--rule)}
+#lb p{color:var(--on-shade);font-size:14px;margin-top:8px;text-align:center}
+
+@media (max-width:980px){ .tools{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:860px){
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts{grid-template-columns:1fr}
+  .journey{grid-template-columns:1fr}
+  .stage{border-right:0;border-bottom:1px solid var(--rule)}
+  .split,.feat,.feat:nth-of-type(even){grid-template-columns:1fr}
+  .feat:nth-of-type(even) .ftext{order:0}
+  .grid2{grid-template-columns:1fr}
+  .tools,.filmstrip.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lrow{grid-template-columns:1fr;gap:6px}
+  .lrow.h{display:none}
+  .costs{grid-template-columns:1fr}
+  .story{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .scard:last-child{grid-column:1/-1}
+  .sum3{grid-template-columns:1fr}
+  .calls{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rules{grid-template-columns:1fr}
+  .habits{grid-template-columns:1fr}
+  .wide-text,.pair-row{grid-template-columns:1fr}
+  .twin-card{grid-template-columns:1fr}
+  .timeline{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:22px}
+  .timeline::before{display:none}
+  .apx-body{grid-template-columns:1fr}
+  .tb{grid-template-columns:auto 1fr}
+  .tb>div:last-child{display:none}
+  .tb>div:nth-child(2){border-right:0}
+}
+@media (max-width:520px){ .timeline{grid-template-columns:repeat(2,minmax(0,1fr))} .calls{grid-template-columns:1fr} .specs>div{grid-template-columns:1fr;gap:4px} .cap{grid-column:auto} .story{grid-template-columns:1fr} .ba-pair{grid-template-columns:1fr} .tools,.filmstrip,.filmstrip.four{grid-template-columns:1fr} .dim span{font-size:10.5px} }
+@media (prefers-reduced-motion:no-preference){
+  .frame .ph img,.tool button img{transition:transform .5s ease}
+  .frame:hover .ph img,.tool button:hover img{transform:scale(1.03)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<section class="sheet hero" aria-labelledby="t0">
+  <div class="tb"><div class="no">AX5 · 00</div><div class="t">Case study · Product design and technology</div><div>Nov 2026</div></div>
+  <div class="in">
+    <p class="for" id="for" hidden>Prepared for <span></span></p>
+    <div class="who mono muted"><span>Samarjitsinh Waghela</span><span>Founder, Axis5</span><span>Associate Director, EV Design · Yulu</span><span>M.Des, NID</span></div>
+    <h1 id="t0">From a first sketch to a <span class="mark">manufacturing decision</span></h1>
+    <p class="lede">Many manufacturing problems are created at the sketch stage and discovered weeks later at the vendor. Axis5 is the AI workspace I founded to catch them early, drawing on 15 years in automotive and mobility. In one project, a brief and a hand sketch move through nine steps to a manufacturability review, an indicative cost and a supplier quote.</p>
+    <a class="watch" href="#launch"><span class="play" aria-hidden="true">▶</span>Watch the 2-minute launch video</a>
+    <div>
+      <div class="strip">
+        <figure class="frame"><div class="ph ba"><img src="img/hero_sketch.jpg" alt="The hand sketch of the hatchback above, and its enhanced version below"><span>Before</span><span class="mark">After · enhanced</span></div><figcaption><span class="mono">Sketch</span><span class="mono muted">Steps 1–4 · brief to enhance</span></figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/hero_render.jpg" alt="Realistic render of the hatchback"></div><figcaption><span class="mono">Render</span><span class="mono muted">Steps 4–5 · render and CMF</span></figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/hero_parts.jpg" alt="Exploded view of the hatchback body"></div><figcaption><span class="mono">Parts</span><span class="mono muted">Step 6 · exploded view</span></figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/hero_dfm.jpg" alt="DFM before and after: a solid part cored out with ribs"></div><figcaption><span class="mono">Make</span><span class="mono muted">Steps 7–9 · DFM, scale, quote</span></figcaption></figure>
+      </div>
+      <div class="dim" aria-hidden="true"><span>one project · one conversation</span></div>
+    </div>
+    <div class="facts">
+      <div><b>58</b><span class="muted small">people have used Axis5, most of them in one college workshop</span></div>
+      <div><b>808</b><span class="muted small">sketch critiques, run by 46 of those people</span></div>
+      <div><b>113</b><span class="muted small">conversations used three or more design steps on the same work</span></div>
+    </div>
+    <p class="muted small">Usage from 10 September to 3 November 2026, my own account excluded. The effect on design quality and development time is not yet measured, and this page says so where it matters.</p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sheet" aria-labelledby="t1">
+  <div class="tb"><div class="no">AX5 · 01</div><div class="t">The problem I kept running into</div><div>Field notes</div></div>
+  <div class="in">
+    <h2 id="t1">Manufacturing knowledge arrives <span class="mark">after</span> the design is fixed</h2>
+    <figure class="diagram"><div class="dscroll"><svg class="dg" viewBox="0 0 1000 340" role="img" aria-label="The cost of a change rises from brief to tooling. Axis5 checks at the sketch stage; problems usually surface at supplier quotes and tooling, weeks later. The battery bucket went from tooling back to the sketch after six weeks of design."><defs><marker id="ah1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahm-mk" d="M0,0 L10,5 L0,10 z"/></marker></defs><text x="20" y="28" class="cap">COST OF A CHANGE · ILLUSTRATIVE, NOT MEASURED</text><rect class="cbar" x="53" y="205" width="34" height="10" rx="2"/><rect class="cbar" x="193" y="199" width="34" height="16" rx="2"/><rect class="cbar" x="333" y="189" width="34" height="26" rx="2"/><rect class="cbar" x="473" y="173" width="34" height="42" rx="2"/><rect class="cbar" x="613" y="147" width="34" height="68" rx="2"/><rect class="cbar hot" x="753" y="107" width="34" height="108" rx="2"/><rect class="cbar hot" x="893" y="65" width="34" height="150" rx="2"/><line class="line" x1="70" y1="232" x2="910" y2="232"/><circle class="node" cx="70" cy="232" r="7"/><text x="70" y="258" text-anchor="middle" class="ink">Brief</text><circle class="node hot" cx="210" cy="232" r="7"/><text x="210" y="258" text-anchor="middle" class="ink">Sketch</text><circle class="node" cx="350" cy="232" r="7"/><text x="350" y="258" text-anchor="middle" class="ink">Concept</text><circle class="node" cx="490" cy="232" r="7"/><text x="490" y="258" text-anchor="middle" class="ink">CAD</text><circle class="node" cx="630" cy="232" r="7"/><text x="630" y="258" text-anchor="middle" class="ink">Engineering review</text><circle class="node" cx="770" cy="232" r="7"/><text x="770" y="258" text-anchor="middle" class="ink">Supplier quotes</text><circle class="node" cx="910" cy="232" r="7"/><text x="910" y="258" text-anchor="middle" class="ink">Tooling</text><text x="210" y="183" text-anchor="middle" class="mk strong">Axis5 checks here</text><line class="tick" x1="210" y1="189" x2="210" y2="196"/><text x="868" y="46" text-anchor="end" class="ink strong">Where problems usually surface</text><text x="868" y="62" text-anchor="end">weeks later, at the vendor →</text><path class="loop" d="M 905 272 C 900 312, 220 312, 214 275" marker-end="url(#ah1)"/><text x="560" y="328" text-anchor="middle" class="mk">Battery bucket at Yulu: six weeks of design, then “it cannot be moulded”. Back to the sketch.</text></svg></div><figcaption class="muted small">The later a problem is found, the more every fix costs. Bar heights show the trend only; they are not measured costs.</figcaption></figure>
+    <div class="split">
+      <div class="prose">
+        <p>Almost every hardware product, from a scooter to a car interior, follows the same path: brief, sketch, concept, CAD, engineering review, supplier quotes, tooling. Designers shape the first half, where form and intent are set. Manufacturing knowledge arrives in the second half, when an engineer or a vendor first sees the CAD. By then every constraint they find becomes rework.</p>
+        <p>I have seen this from both ends: first in automotive service, where design decisions showed up as field failures, then in design, where they showed up as rework. At Yulu we spent six weeks designing a battery bucket for a vehicle's battery compartment. The tooling vendor then told us it could not be moulded, because of undercuts nobody had flagged. The redesign pushed back the launch. Those undercuts could have been caught at the sketch stage.</p>
+        <p class="muted" style="font-size:15px">Small mass-produced consumer electronics take 9 to 12 months from concept to production (<a href="https://orbit-kb.mit.edu/hc/en-us/articles/206073496-How-long-should-it-take-to-develop-a-product/">MIT</a>). An injection mould quoted at 8 to 12 weeks can become 14 to 16 once DFM questions, approvals and trials begin (<a href="https://qualityinspection.org/why-injection-mold-tooling-often-takes-longer-than-you-were-quoted/">QualityInspection</a>).</p>
+      </div>
+      <div style="display:grid;gap:24px">
+        <p class="quote">Making is not the slow part. Deciding is.</p>
+        <div>
+          <p class="mono muted" style="margin-bottom:12px">The loop I saw on project after project</p>
+          <ol class="loop">
+            <li>A designer explores concepts and chooses a direction.</li>
+            <li>The form is modelled in CAD and sent to an engineer or supplier.</li>
+            <li>The supplier replies: too complex, or too expensive. Undercuts, thin or uneven walls, missing draft.</li>
+            <li>The design goes back for changes, often losing what made it distinctive.</li>
+          </ol>
+        </div>
+        <div class="prose" style="font-size:15.5px">
+          <p><b>AI widens the gap.</b> Designers can now generate unusual forms in minutes, but manufacturing feedback still arrives weeks later, from a supplier.</p>
+          <p><b>AI also loses the designer's intent.</b> Designers already use AI image tools, but each pass redraws the sketch: proportions drift, details change, and the designer's own hand turns into a generic AI style. Axis5 locks the design and the viewpoint before any AI pass, so only what the designer asked for changes. Studio Twin goes further and keeps the designer's way of drawing.</p>
+          <p><b>The tools that exist start too late.</b> Rule-based DFM checkers assume finished CAD and an engineering team. Marketplaces return a quote, not a decision. Nobody is critiquing the design at the sketch stage.</p>
+          <p><b>The cycle is split across tools.</b> Brief, sketch, CAD, DFM and quotes each live somewhere else, and context is lost at every handoff.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sheet" aria-labelledby="t2">
+  <div class="tb"><div class="no">AX5 · 02</div><div class="t">What Axis5 does</div><div>System view</div></div>
+  <div class="in">
+    <h2 id="t2">One workspace moves the manufacturing question to the sketch</h2>
+    <div class="journey">
+      <div class="stage"><p class="mono">1 · Define the intent</p><ul><li><i>01</i>Brief</li></ul><p class="note muted">The brief is written once and every later step is judged against it.</p></div>
+      <div class="stage hot"><p class="mono mark">2 · Develop the sketch</p><ul><li><i>02</i>Critique</li><li><i>03</i>Explore</li><li><i>04</i>Enhance and Render</li><li><i>05</i>CMF</li><li><i>06</i>Parts</li><li><i>+</i>Inclusion review</li></ul><p class="note"><b>Manufacturing is checked here</b>, while a change still costs a redraw.</p></div>
+      <div class="stage"><p class="mono">3 · Bridge to production</p><ul><li><i>07</i>DFM</li><li><i>08</i>Scale</li><li><i>09</i>Quotation</li></ul><p class="note muted">Where problems usually surface: at the vendor, weeks later.</p></div>
+    </div>
+    <div class="role">
+      <p class="mono mark">My role</p>
+      <ol class="timeline"><li><span class="mono">Engineering</span><b>Automobile engineering</b></li><li><span class="mono">Service</span><b>Mahindra Two Wheelers · Hero MotoCorp</b><span>After-sales service and dealer technical training</span></li><li><span class="mono">Design</span><b>NID, M.Des</b><span>Transportation and Automobile Design, with a semester at DAAP, Cincinnati</span></li><li><span class="mono">2019</span><b>Yulu, first in-house designer</b><span>About 2,500 vehicles, scaled past 50,000. Now Associate Director, EV Design</span></li><li><span class="mono">Miracle 2</span><b>Battery moved under the seat</b><span>After field water ingress. About 10,000 built</span></li><li><span class="mono">Miracle 3.0</span><b>Leading Yulu's side</b><span>With Bajaj Auto</span></li><li><span class="mono">Feb 2025</span><b>Axis5 pitched</b><span>First runner-up, Yulu internal hackathon</span></li><li class="now"><span class="mono">Sep 2025</span><b>Axis5 full time</b><span>With Yulu's support</span></li></ol>
+      <div class="split">
+        <div class="prose">
+          <p>I started on the receiving end of design decisions. After automobile engineering, I worked in after-sales service and dealer technical training at Mahindra Two Wheelers and Hero MotoCorp, close to field failures and to what riders actually do to vehicles. I then trained as a transportation designer at NID, with an M.Des and a semester at the University of Cincinnati's DAAP.</p>
+          <p>I joined Yulu in 2019 as its first in-house designer, when the fleet was about 2,500 vehicles, and now lead EV design as Associate Director. I was part of the scale-up past 50,000 vehicles, working across design, BOM planning, OEM partners in India and China, and production constraints. I now lead Yulu's side of the Bajaj Auto-led Miracle 3.0.</p>
+          <p>I pitched Axis5 at Yulu's internal hackathon in February 2025, where it placed first runner-up. I built it part-time, then full-time from September 2025 with Yulu's support. I own the product direction, the user journey, each workflow and its interface, and what the system is allowed to claim.</p>
+          <p>I built the first version myself with AI-assisted coding. Shreevathsa R. joined as a full-stack engineer in November 2025 and has led engineering full-time since March 2026. I keep prototyping features and supply the manufacturing knowledge the system reasons with.</p>
+        </div>
+        <div class="probs">
+          <p class="mono">The problems I kept hitting at Yulu</p>
+          <div class="prob"><h3>Water in the floorboard</h3><p>After field water ingress on the Miracle 2, I re-architected its packaging and moved the battery from the floorboard to under the seat. About 10,000 were built.</p></div><div class="prob"><h3>A part that could not be moulded</h3><p>Six weeks went into a battery bucket before the tooling vendor found undercuts nobody had flagged, and the launch slipped.</p></div><div class="prob"><h3>Sink marks found in production</h3><p>The speedometer's outer casing showed sink marks only once it was being made.</p></div><div class="prob"><h3>Intent lost between partners</h3><p>Design intent broke as the work moved between designers, BOM planning and OEM partners in India and China.</p></div>
+          <p class="probs-end">Each was found late, by someone downstream, after the cost was already paid. That is where Axis5 came from.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NINE STEPS -->
+<section class="sheet" aria-labelledby="t3">
+  <div class="tb"><div class="no">AX5 · 03</div><div class="t">Nine steps, one workspace</div><div>Recorded on the live product</div></div>
+  <div class="in">
+    <h2 id="t3">Nine steps carry the journey</h2>
+
+    <article class="feat">
+      <div class="ftext"><span class="idx">01 / 09 · DEFINE</span><h3>Brief</h3>
+        <dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">A product that answers the wrong problem is wasted, however well it is drawn. Getting the brief and the problem statement right decides what every later choice is judged against.</dd><dt>What it does</dt><dd>Drafts a structured brief with the designer: product, user, situation, need, measurable criteria and constraints. Anything Axis5 adds is labelled as its suggestion.</dd>
+        <dt>Why it matters</dt><dd>Every later critique, direction and check is judged against it, so feedback becomes a test rather than an opinion.</dd></dl>
+        <p class="ex"><b>In a recorded session</b>A compact two-door electric coupe for city commuting was judged on measurable criteria, such as a length under 4.2 m and a 350 km range. Axis5's own additions were labelled as suggestions.</p></div>
+      <figure class="shot"><button type="button"><img src="img/c_brief.jpg" alt="A confirmed brief for a compact electric coupe, with Axis5's suggestions labelled" loading="lazy"></button><figcaption>A confirmed brief for a compact electric coupe, with Axis5's suggestions labelled.</figcaption></figure>
+    </article>
+
+    <article class="feat">
+      <div class="ftext"><span class="idx">02 / 09 · SKETCH</span><h3>Critique</h3>
+        <dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">Sketching is how an idea becomes something others can see and judge. Many people have strong ideas but not the sketching skill to show them, so the idea is dropped or misread. Constructive critique helps them correct the sketch and say what they mean.</dd><dt>What it does</dt><dd>Reads the sketch, identifies the product and view, scores six design criteria against the brief and names the next moves.</dd>
+        <dt>Why it matters</dt><dd>Feedback arrives while the design is still a sketch, when a change costs a redraw.</dd></dl>
+        <p class="ex"><b>In a recorded session</b>The coupe sketch scored 5.8/10, studio band "Developing". Perspective and wheel alignment were named as the main issues, with a wider stance and longer wheelbase as the next move.</p></div>
+      <figure class="shot"><button type="button"><img src="img/c_critique.jpg" alt="A coupe sketch critiqued criterion by criterion against its brief" loading="lazy"></button><figcaption>The coupe sketch, critiqued criterion by criterion against its brief.</figcaption></figure>
+    </article>
+
+    <article class="feat">
+      <div class="ftext"><span class="idx">03 / 09 · SKETCH</span><h3>Explore</h3>
+        <dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">Exploration is the most important stage of developing any idea: it is where the first thought meets better alternatives. Rushing it locks in the first idea.</dd><dt>What it does</dt><dd>Proposes ten directions within the brief. Each states what changes, what stays and how it serves the brief.</dd>
+        <dt>Why it matters</dt><dd>Exploration stays tied to the brief rather than producing random variations, and the choice stays with the designer.</dd></dl>
+        <p class="ex"><b>In a recorded session</b>From a coupe sketch, direction 4, wide wheel-arch extensions, was carried forward and rendered.</p></div>
+      <figure class="shot"><button type="button"><img src="img/explore.jpg" alt="Ten directions board for a coupe sketch" loading="lazy"></button><figcaption>Ten directions within the brief.</figcaption></figure>
+    </article>
+
+    <article class="feat">
+      <div class="ftext"><span class="idx">04 / 09 · SKETCH</span><h3>Enhance and Render</h3>
+        <dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">A rough sketch only convinces people who read sketches. A clean redraw, a realistic render and the same design seen from other views let engineers, managers and buyers judge the idea too.</dd><dt>What it does</dt><dd>Enhance redraws the sketch cleanly, keeping its proportions and character, with the original beside it. Two quick questions, style and colour, then set up a realistic render.</dd>
+        <dt>Why it matters</dt><dd>A designer needs to see an idea clearly to judge it, and to show it to people who do not read rough sketches.</dd></dl>
+        <p class="ex"><b>In a recorded session</b>One message, "give me a side view of this car", turned the hatchback render to a side profile with the design unchanged.</p>
+        </div>
+      <figure class="shot"><button type="button" class="pair"><img src="img/s4_pair.jpg" alt="Before: the hand sketch. After: the enhanced version, with the same proportions and character" loading="lazy"><span class="lbl">Before</span><span class="lbl r">After · enhanced</span></button><figcaption>The hand sketch and its enhanced version: cleaner lines, same proportions and character.</figcaption></figure>
+          <div class="twin-card">
+        <div class="tc-head"><span class="pill">Studio Twin</span><h4>The designer's own hand, kept</h4></div>
+        <div class="tc-body"><p>A designer uploads 3 to 15 of their own sketches, or a portfolio link, and Axis5 describes how they draw: line quality, stroke energy and shading habits. Once the designer confirms it, Enhance and Render lean toward their hand instead of a generic AI style.</p><p class="small muted">An approximation, not a clone. It can be edited, relearned or switched off at any time.</p><button type="button" class="readmore" data-tool="studio-twin">Watch Studio Twin in action →</button></div>
+      </div>
+    </article>
+
+    <article class="feat">
+      <div class="ftext"><span class="idx">05 / 09 · SKETCH</span><h3>CMF</h3>
+        <dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">Colour, material and finish increasingly decide how a product is perceived, and new materials and processes keep widening the choice. Designers need to try them on their own idea early, not leave them to the end.</dd><dt>What it does</dt><dd>Changes a design's colour, material and finish while keeping its form. The direction can be this year's researched trend for the category, the designer's own words, or a reference image.</dd>
+        <dt>Why it matters</dt><dd>CMF shapes how a product is perceived and priced, and every finish implies a process, a supplier and a cost.</dd></dl>
+        <p class="ex"><b>In a recorded session</b>Warm Minimalism 2026 (warm neutrals, soft-touch matte, brushed-metal accents) was applied to the headphone sketch. The form stayed as drawn.</p>
+        <button type="button" class="readmore" data-tool="cmf">Why Axis5 is good at CMF →</button></div>
+      <figure class="shot"><button type="button"><img src="img/a_cmf_trends.jpg" alt="2026 trend directions, each with colour, material and finish descriptors" loading="lazy"></button><figcaption>2026 trend directions, each with colour, material and finish descriptors.</figcaption></figure>
+    </article>
+
+    <article class="feat wide">
+      <div class="ftext wide-text"><div class="wt-a"><span class="idx">06 / 09 · SKETCH → PARTS</span><h3>Parts</h3><dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">A designer who knows how many parts a product needs, and where they split, makes better decisions about form, cost and assembly. Without a tool, that awareness arrives only when a CAD engineer models the part.</dd><dt>What it does</dt><dd>Breaks the sketch into the parts it would be made from, each with a function, likely material and process, then explodes it into clickable parts. Concerns arrive as questions, not verdicts.</dd>
+        <dt>Why it matters</dt><dd>This is where a sketch first meets manufacturing, before any CAD exists.</dd></dl></div><div class="wt-b"><p class="ex"><b>In a recorded session</b>The doors came back as a steel inner structure with an aluminium or composite skin, stamped, hemmed and bolted.</p><span class="stat">Hatchback <b>20</b> parts · 15 drawn · 5 hidden</span></div></div>
+      <div class="pair-row"><figure class="shot"><button type="button"><img src="img/pv_parts.jpg" alt="Production version parts list" loading="lazy"></button><figcaption>The production version, each part with its function, material and process.</figcaption></figure><figure class="shot"><button type="button" class="pair"><img src="img/hero_parts.jpg" alt="The exploded view of the hatchback, with the body-in-white selected" loading="lazy"></button><figcaption>The exploded view, with the body-in-white selected. 11 of 18 parts separated as clickable parts, and Axis5 listed the ones still fused.</figcaption></figure></div>
+    </article>
+
+    <article class="feat wide">
+      <div class="ftext wide-text"><div class="wt-a"><span class="idx">07 / 09 · PRODUCTION</span><h3>DFM</h3><dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">Manufacturability decides whether a design ever reaches production. Most designers never see a toolmaker's checklist, so draft, wall thickness and undercuts are left for someone else to find.</dd><dt>What it does</dt><dd>On a STEP file, identifies the part and process and asks only what the geometry cannot say. It checks draft, walls, undercuts, sink risk and edges, marks each issue on the part and proposes a combined fix.</dd>
+        <dt>Why it matters</dt><dd>These are the problems a tooling vendor would otherwise find weeks later, like the battery bucket's undercuts.</dd></dl></div><div class="wt-b"><p class="ex"><b>A real Yulu part</b>The speedometer's outer casing had shown sink marks in production. Uploaded to Axis5, it was flagged for sink risk across 99.4% of its surface, the most serious of nine issues. Since then, the team runs new plastic parts through Axis5 before tooling.</p><span class="stat">Manufacturability <b>33/100</b> · 9 issues</span></div></div>
+      <div class="pair-row dfm"><figure class="shot"><button type="button"><img src="img/dfm_sink_note.jpg" alt="The speedometer casing highlighted red, with a callout: sink-mark risk, a thick region across 99.4% of the surface, marked critical. The matching finding is boxed in the issues panel." loading="lazy"></button><figcaption><b>1 · The finding.</b> Sink-mark risk highlighted on the part: a thick region across 99.4% of the surface, marked critical and auto-fixable.</figcaption></figure><figure class="shot"><button type="button"><img src="img/hero_dfm.jpg" alt="Before and after: the solid instrument-cluster case, and the cored-out version with a rib grid" loading="lazy"></button><figcaption><b>2 · The fix.</b> The solid case, and the combined fix: cored out with a rib grid for even walls.</figcaption></figure></div>
+      <figure class="diagram dfm-story"><div class="dscroll"><svg class="dg" viewBox="0 0 1000 250" role="img" aria-label="Speedometer outer casing. What happened: design, CAD, tooling, production, then sink marks were found. The same part checked in Axis5 afterwards: STEP file uploaded, DFM check, sink risk on 99.4 percent of the surface flagged as the top issue of nine, and a cored-out fix with a rib grid proposed. Now new plastic parts go through this check before tooling."><defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahm" d="M0,0 L10,5 L0,10 z"/></marker></defs><text x="0" y="64" class="ink strong">What happened</text><text x="0" y="80">in production</text><rect class="box" x="220" y="40" width="132" height="52" rx="6"/><text x="286.0" y="71" text-anchor="middle" class="ink">Design</text><line class="line" x1="354" y1="66" x2="370" y2="66" marker-end="url(#ah2)"/><rect class="box" x="374" y="40" width="132" height="52" rx="6"/><text x="440.0" y="71" text-anchor="middle" class="ink">CAD</text><line class="line" x1="508" y1="66" x2="524" y2="66" marker-end="url(#ah2)"/><rect class="box" x="528" y="40" width="132" height="52" rx="6"/><text x="594.0" y="71" text-anchor="middle" class="ink">Tooling</text><line class="line" x1="662" y1="66" x2="678" y2="66" marker-end="url(#ah2)"/><rect class="box" x="682" y="40" width="132" height="52" rx="6"/><text x="748.0" y="71" text-anchor="middle" class="ink">Production</text><line class="line" x1="816" y1="66" x2="832" y2="66" marker-end="url(#ah2)"/><rect class="box bad" x="836" y="40" width="150" height="52" rx="6"/><text x="911.0" y="62" text-anchor="middle" class="ink">Sink marks</text><text x="911.0" y="79" text-anchor="middle" class="ink">found</text><text x="0" y="174" class="mk strong">Same part, in Axis5</text><text x="0" y="190">checked afterwards</text><rect class="box" x="220" y="150" width="132" height="52" rx="6"/><text x="286.0" y="172" text-anchor="middle" class="ink">STEP file</text><text x="286.0" y="189" text-anchor="middle" class="ink">uploaded</text><line class="line" x1="354" y1="176" x2="370" y2="176" marker-end="url(#ah2)"/><rect class="box" x="374" y="150" width="132" height="52" rx="6"/><text x="440.0" y="181" text-anchor="middle" class="ink">DFM check</text><line class="line" x1="508" y1="176" x2="524" y2="176" marker-end="url(#ah2)"/><rect class="box good" x="528" y="150" width="262" height="52" rx="6"/><text x="659.0" y="172" text-anchor="middle" class="ink">Sink risk on 99.4% of the surface:</text><text x="659.0" y="189" text-anchor="middle" class="ink">the top issue of nine</text><line class="line" x1="792" y1="176" x2="808" y2="176" marker-end="url(#ah2)"/><rect class="box" x="812" y="150" width="174" height="52" rx="6"/><text x="899.0" y="172" text-anchor="middle" class="ink">Cored-out fix</text><text x="899.0" y="189" text-anchor="middle" class="ink">with a rib grid</text><text x="220" y="236" class="mk strong">Now: new plastic parts go through this check before tooling.</text></svg></div><figcaption class="muted small">The speedometer's outer casing, a real Yulu part. The Axis5 check was run after production, on the same CAD file.</figcaption></figure>
+    </article>
+
+    <article class="feat wide">
+      <div class="ftext wide-text"><div class="wt-a"><span class="idx">08 / 09 · PRODUCTION</span><h3>Scale</h3><dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">A design is only viable at the cost and volume it will be made at. Quantity, material and location change both the price and the process, yet designers rarely see those numbers while the design can still change.</dd><dt>What it does</dt><dd>Three questions (quantity, hub, material) become a live model of unit cost, tooling, lead time and readiness across Indian manufacturing hubs. Every figure is labelled indicative.</dd>
+        <dt>Why it matters</dt><dd>Cost and tooling decisions usually wait weeks for supplier quotes, so design choices are made without knowing what they cost.</dd></dl></div><div class="wt-b"><p class="ex"><b>In a recorded session</b>The same case at 100,000 units from Peenya: about ₹31 a unit and ₹5.97 lakh of tooling, with Ahmedabad about 9% cheaper.</p></div></div>
+      <div class="pair-row"><figure class="shot"><button type="button"><img src="img/scale_factors.jpg" alt="Adjust factors: 100,000 units, Bangalore (Peenya), ABS, with unit cost, lead time and readiness updating live" loading="lazy"></button><figcaption>The instrument-cluster case at 100,000 units from Peenya: ₹31 a unit, 8 weeks, readiness 67/100. Every factor updates the numbers live.</figcaption></figure><figure class="shot"><button type="button"><img src="img/scale_analysis.jpg" alt="Scale analysis for an aluminium part: readiness, unit cost falling with volume, and the risk profile" loading="lazy"></button><figcaption>The full analysis on a different part, in aluminium 6061-T6 at Peenya: unit cost falls with volume, to ₹227 at 1,000 units, with a five-axis risk profile.</figcaption></figure></div>
+    </article>
+
+    <article class="feat wide">
+      <div class="ftext wide-text"><div class="wt-a"><span class="idx">09 / 09 · PRODUCTION</span><h3>Quotation</h3><dl class="wwv"><dt class="need-dt">The need</dt><dd class="need-dd">A design becomes a product only when someone can make it, at the right price. Choosing the right supplier and reading the quote well decide whether that happens.</dd><dt>What it does</dt><dd>A Marketplace Bridge drafts a request for quotation from the part and opens it on IndiaMART, Google Maps, JustDial or instant-quote partners. A quote analyser then reviews what comes back.</dd>
+        <dt>Why it matters</dt><dd>Small teams rarely know which suppliers to approach, or how to judge the quotes they receive.</dd></dl></div><div class="wt-b"><p class="ex"><b>In the product demo</b>For an aluminium part from Peenya, the Marketplace Bridge drafted the inquiry and opened a Google Maps search of die-casting and CNC vendors nearby. A real supplier quote was then uploaded: the analyser flagged missing tooling costs as critical and suggested asking for them as a separate line, with a negotiation script.</p></div></div>
+      <div class="pair-row q"><figure class="shot"><button type="button"><img src="img/market_bridge.jpg" alt="Marketplace Bridge: Find on IndiaMART with the inquiry copied, Google Maps, JustDial, and instant-quote partners Zetwerk and Protolabs" loading="lazy"></button><figcaption><b>1 · Reach suppliers.</b> The Marketplace Bridge copies the inquiry and opens IndiaMART, Google Maps, JustDial or instant-quote partners.</figcaption></figure><figure class="shot"><button type="button"><img src="img/scale_qa.jpg" alt="Quote analysis: missing tooling costs flagged as critical, with a negotiation playbook" loading="lazy"></button><figcaption><b>2 · Judge the quote.</b> Missing tooling costs flagged as critical, with a negotiation playbook. Recorded on an earlier interface; the quote is cropped to the analysis.</figcaption></figure></div>
+    </article>
+  </div>
+</section>
+
+<!-- SPOTLIGHT: INCLUSION -->
+<section class="sheet" id="inclusion" aria-labelledby="t35">
+  <div class="tb"><div class="no">AX5 · 04</div><div class="t">Spotlight · Product Inclusion Review</div><div>Sketch stage</div></div>
+  <div class="in">
+    <h2 id="t35">Who cannot use it is decided <span class="mark">on the sketch</span></h2>
+    <div class="ba-pair">
+      <figure class="shot"><button type="button"><img src="img/a_incl_before.jpg" alt="Before: the original sketch sheet of two water dispensers, as uploaded" loading="lazy"></button><figcaption><b class="mono">Before</b>The sheet as uploaded: two dispensers, one loaded from a bottle on top.</figcaption></figure>
+      <figure class="shot"><button type="button"><img src="img/a_incl_after.jpg" alt="After: the accepted inclusion changes drawn onto the same sheet" loading="lazy"></button><figcaption><b class="mono mark">After</b>The accepted changes drawn onto the same sheet. The original is kept for comparison.</figcaption></figure>
+    </div>
+    <div class="ftext wide-text"><div class="wt-a"><dl class="wwv"><dt>What it does</dt><dd>Reviews the design against the seven principles of Universal Design, with cited guidelines. It names who would struggle to use the product and why. Accepted changes are drawn onto the sketch, with the original kept for comparison.</dd>
+        <dt>Why it matters</dt><dd>Who cannot use a product is a design decision. It is far cheaper to answer on a sketch than after tooling.</dd>
+        <dt>Value in the journey</dt><dd>Inclusion becomes part of the design loop rather than a late audit.</dd></dl></div><div class="wt-b"><p class="ex"><b>In a recorded session</b>Over two rounds of accepted changes, the right-hand dispenser moved its bottle into a bottom-loading cabinet and got HOT and COLD marked on its taps. The dispensers also got a window onto the bottle's water line and a red float that rises as the drip tray fills. Where an image model could not draw a change as asked, Axis5 said so.</p><p style="font-size:15.5px"><b>Going further.</b> A System Deep Dive looks beyond the object to the whole journey of use: finding it, approaching, using, refilling, cleaning and repairing it, and the people who keep it running. A separate Fit &amp; Ergonomics check reviews reach, grip, adjustment and comfort against the brief, cites its references and names what only a mock-up or a trial with real users can settle.</p></div></div>
+  </div>
+</section>
+
+<!-- JUDGEMENT -->
+<section class="sheet" aria-labelledby="tj">
+  <div class="tb"><div class="no">AX5 · 05</div><div class="t">What I tried, what failed, what I killed</div><div>Decision log</div></div>
+  <div class="in">
+    <h2 id="tj">Behind the features: <span class="mark">six calls I made</span></h2>
+    <p class="muted" style="max-width:66ch">Each feature above went through versions that did not work. These are the calls that shaped them.</p>
+    <div class="calls"><div class="call"><p class="mono mark">01 · Workflow</p><h3>One conversation, not three modes</h3><dl class="wwv"><dt>Tried</dt><dd>Separate Dream, Build and Scale modes, one for each stage of the journey.</dd><dt>What went wrong</dt><dd>Context was lost at every switch, the same handoff problem Axis5 exists to fix.</dd><dt>What I changed</dt><dd>I killed the modes. One conversation now carries the work, and an orchestrator picks the tool.</dd></dl></div><div class="call"><p class="mono mark">02 · Package Check</p><h3>Measure before believing</h3><dl class="wwv"><dt>Tried</dt><dd>Proportion bands that decided what kind of vehicle a sketch showed.</dd><dt>What went wrong</dt><dd>On a benchmark of 1,099 student sketches and renders, most cars read as vans, and a sports car scored as a pickup.</dd><dt>What I changed</dt><dd>The view now decides the body type, and the bands only give feedback. Three-quarter views are declined, and multi-vehicle sheets ask to be cropped.</dd></dl></div><div class="call"><p class="mono mark">03 · Exploded view</p><h3>Don't let a model guess the parts</h3><dl class="wwv"><dt>Tried</dt><dd>Cutting the finished sketch into parts with an image-segmentation model.</dd><dt>What went wrong</dt><dd>On a drawing where parts touch, it has to guess where one ends, and it added a heavy dependency.</dd><dt>What I changed</dt><dd>Axis5 draws the parts apart first, counts them against the parts list, and says which are still fused.</dd></dl></div><div class="call"><p class="mono mark">04 · Style library</p><h3>My eye over the metric</h3><dl class="wwv"><dt>Tried</dt><dd>Tuning a storyboard style until it matched the reference's measured light and dark.</dd><dt>What went wrong</dt><dd>It scored higher and looked worse. The styles also hard-coded the reference colours, so every sketch came out orange.</dd><dt>What I changed</dt><dd>I locked the richer version by eye, and measurements now only flag drift. Colour is a choice within each style.</dd></dl></div><div class="call"><p class="mono mark">05 · Inclusion review</p><h3>Kill false precision</h3><dl class="wwv"><dt>Tried</dt><dd>A score from 1 to 10 for each Universal Design principle.</dd><dt>What went wrong</dt><dd>A number from a single front sketch was invented precision.</dd><dt>What I changed</dt><dd>Each principle now reads "visible support", "potential barrier" or "needs evidence", with a confidence level.</dd></dl></div><div class="call"><p class="mono mark">06 · Market judgment</p><h3>Commit before you debate</h3><dl class="wwv"><dt>Tried</dt><dd>Inferring the target buyer and price silently, without asking.</dd><dt>What went wrong</dt><dd>A designer cannot argue with a verdict on a price they never committed to.</dd><dt>What I changed</dt><dd>The read asks for intent first. A suggested change edits the sketch before anything is rendered, so the sketch stays the designer's own.</dd></dl></div></div>
+    <div class="rules">
+      <p class="mono mark">Three rules that run through everything</p>
+      <div><h3>Each check needs its own evidence</h3><p>DFM runs only on a CAD file. Package Check declines a three-quarter sketch and asks for a side, front or rear view.</p></div>
+      <div><h3>The designer chooses; the system offers</h3><p>Explore offers ten directions within the brief, and Enhance keeps the original beside the new version.</p></div>
+      <div><h3>Uncertainty is labelled where the number appears</h3><p>Scale says "indicative, not live quotes" beside its figures. Meshes say concept, and market reads say directional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSIONS -->
+<section class="sheet" aria-labelledby="t5">
+  <div class="tb"><div class="no">AX5 · 06</div><div class="t">End to end, in two real sessions</div><div>From recordings</div></div>
+  <div class="in">
+    <h2 id="t5">Two recorded sessions</h2>
+    <p class="muted" style="max-width:66ch">Every screen comes from the live product. Click any screen to see it full size.</p>
+    <div class="session">
+      <h3>Headphones for elderly listeners · brief to ergonomics in about five minutes</h3>
+      <div class="story"><div class="scard"><figure class="shot"><button type="button"><img src="img/brief.jpg" alt="The confirmed brief for headphones for elderly listeners" loading="lazy"></button></figure><p class="mono mark">01 · Brief</p><p>Six questions set the product, user, situation and need. Axis5 added two criteria and labelled them as its own.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/hp_review.jpg" alt="The sketch reviewed against the brief" loading="lazy"></button></figure><p class="mono mark">02 · Review</p><p>"Mixed against the brief": the over-ear form fits, but no volume control is visible.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/critique.jpg" alt="Sketch critique scored criterion by criterion" loading="lazy"></button></figure><p class="mono mark">03 · Critique</p><p>Proportion 8/10 for long wear. Construction 6/10: the headband-to-yoke joint cannot fold.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/hp_render.jpg" alt="The headphones rendered in the Warm Minimalism 2026 direction" loading="lazy"></button></figure><p class="mono mark">04 · CMF</p><p>Warm Minimalism 2026 applied at render time. The form is unchanged.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/hp_ergo.jpg" alt="Fit and ergonomics check, with library sources" loading="lazy"></button></figure><p class="mono mark">05 · Ergonomics</p><p>Padding and adjustment reviewed. Weight balance and cushion softness are left to a physical sample.</p></div></div>
+      <p class="ex"><b>What it shows</b>The brief named the user once, and every later step judged the design against that user, from the missing volume control to the questions about controls and long wear.</p>
+    </div>
+    <div class="session">
+      <h3>A student's ballpoint sketch · to a 3D model in about two minutes</h3>
+      <div class="story"><div class="scard"><figure class="shot"><button type="button"><img src="img/s2_critique.jpg" alt="Critique: perspective 4 out of 10, with the reasons" loading="lazy"></button></figure><p class="mono mark">01 · Critique</p><p>4.1/10, "Early Development". It named the fixes and linked two tutorials on exactly those problems.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/s2_enhance.jpg" alt="The enhanced sketch compared with the original" loading="lazy"></button></figure><p class="mono mark">02 · Enhance</p><p>Redrawn cleanly, with the original kept for comparison.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/s2_edit.jpg" alt="Edit by message: futuristic headlights, with the impact checked" loading="lazy"></button></figure><p class="mono mark">03 · Edit by message</p><p>"Make the headlights more futuristic", then EV wheels. After each edit, Axis5 confirmed the proportions held.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/s2_render.jpg" alt="The airbrush render" loading="lazy"></button></figure><p class="mono mark">04 · Render</p><p>An airbrush render in copper orange.</p></div><div class="scard"><figure class="shot"><button type="button"><img src="img/s2_3d.jpg" alt="The 3D concept model, generated from the render" loading="lazy"></button></figure><p class="mono mark">05 · 3D model</p><p>A concept mesh from the render, rotatable in the viewer. For form review, not production CAD.</p></div></div>
+      <p class="ex"><b>What it shows</b>Every change is made by a sentence and checked against the design criteria rather than drawn from scratch. Recorded on an earlier version of the interface.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="sheet" aria-labelledby="t6">
+  <div class="tb"><div class="no">AX5 · 07</div><div class="t">Early use and its limits</div><div>Ledger · 10 Sep–3 Nov 2026</div></div>
+  <div class="in">
+    <h2 id="t6">58 people used it. Most came in <span class="mark">one week</span>.</h2>
+    <div class="split">
+      <div style="display:grid;gap:14px">
+        <svg class="chart" viewBox="0 0 520 250" role="img" aria-label="People active each week: 46 in the workshop week of 28 September, 1 to 3 in most other weeks">
+          <line x1="20" x2="510" y1="210" y2="210" stroke="var(--rule)"/>
+          <g fill="var(--muted)" opacity=".55">
+            <rect x="28" y="203" width="38" height="7"/><rect x="82" y="207" width="38" height="3"/><rect x="136" y="169" width="38" height="41"/>
+            <rect x="244" y="199" width="38" height="11"/><rect x="298" y="203" width="38" height="7"/><rect x="352" y="207" width="38" height="3"/><rect x="406" y="207" width="38" height="3"/><rect x="460" y="207" width="38" height="3"/>
+          </g>
+          <rect x="190" y="38" width="38" height="172" fill="var(--mark)"/>
+          <g text-anchor="middle">
+            <text x="47" y="198">2</text><text x="101" y="202">1</text><text x="155" y="164">11</text><text x="209" y="32" class="lbl">46</text>
+            <text x="263" y="194">3</text><text x="317" y="198">2</text><text x="371" y="202">1</text><text x="425" y="202">1</text><text x="479" y="202">1</text>
+            <text x="47" y="228">7 Sep</text><text x="155" y="228">21 Sep</text><text x="209" y="244" class="lbl">28 Sep</text><text x="263" y="228">5 Oct</text><text x="371" y="228">19 Oct</text><text x="479" y="228">2 Nov</text>
+          </g>
+          <text x="236" y="70" style="fill:var(--ink)">College workshop</text>
+        </svg>
+        <p class="muted small">People active each week, my own account excluded. Only 3 were active in more than one week.</p>
+      </div>
+      <div class="tablebox">
+        <table class="uses">
+          <thead><tr><th>Capability</th><th>Runs</th><th>People</th></tr></thead>
+          <tbody>
+            <tr><td>Sketch critique</td><td>808</td><td>46<span class="bar" style="width:46px"></span></td></tr>
+            <tr><td>Enhanced versions</td><td>656</td><td>51<span class="bar" style="width:51px"></span></td></tr>
+            <tr><td>Renders</td><td>348</td><td>43<span class="bar" style="width:43px"></span></td></tr>
+            <tr><td>Ideation boards</td><td>293</td><td>45<span class="bar" style="width:45px"></span></td></tr>
+            <tr class="low"><td>Package Check</td><td>25</td><td>7<span class="bar" style="width:7px"></span></td></tr>
+            <tr class="low"><td>DFM review</td><td>6</td><td>1<span class="bar" style="width:2px"></span></td></tr>
+            <tr class="low"><td>Scale</td><td>1</td><td>1<span class="bar" style="width:2px"></span></td></tr>
+          </tbody>
+        </table>
+        <p class="muted small" style="margin-top:10px">113 conversations used three or more design steps on the same work. Pilots with hardware teams have mostly run as guided sessions under our own accounts.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEARNED -->
+<section class="sheet" aria-labelledby="t7">
+  <div class="tb"><div class="no">AX5 · 08</div><div class="t">Impact, limits and what comes next</div><div>Next experiments</div></div>
+  <div class="in">
+    <h2 id="t7">What changed, what is <span class="mark">still unproven</span></h2>
+    <div class="split">
+      <div style="display:grid;gap:12px">
+        <p class="mono mark">What changed for Yulu's team</p>
+        <ul class="checks yes">
+          <li>Plastic parts are run through DFM before they reach a toolmaker.</li>
+          <li>Technical questions are discussed against the part itself, with sources.</li>
+          <li>Ideas are explored faster: sketch to directions to render in one sitting.</li>
+          <li>A first dimensioned drawing takes minutes instead of waiting for drafting.</li>
+          <li>Fewer handoffs: design, manufacturability, cost and drawings in one project.</li>
+        </ul>
+        <p class="muted small">Reported by the team; not yet measured against a baseline.</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <p class="mono">What this does not show yet</p>
+        <ul class="checks no">
+          <li><b>Time saved or better designs.</b> No before-and-after on the same kind of task.</li>
+          <li><b>Reliable engineering results.</b> DFM and Scale have barely been used by others; costs are indicative, not quotes.</li>
+          <li><b>Lasting use.</b> Most people used Axis5 in one week and did not return.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="next-h"><h3>Each lesson becomes a test</h3><p class="muted small">Every gap above has an experiment designed to close it.</p></div>
+    <div class="learn"><div class="lrow h"><span>What I learned</span><span>Next experiment</span><span>What it measures</span></div><div class="lrow"><span>A workshop creates a spike, not a habit: 46 people in one week, 3 who came back.</span><span>Tie Axis5 to a course assignment with a second review two weeks later.</span><span class="muted">Share of students who return unprompted</span></div><div class="lrow"><span>Volume of use does not prove value.</span><span>Track suggestions into final submissions; have faculty rate before-and-after blind.</span><span class="muted">Adoption rate and rating difference</span></div><div class="lrow"><span>A clean result needs a test it can fail. One part passed DFM clean while another drew nine issues.</span><span>A set of parts with known defects: zero draft, uneven walls, sharp internal corners.</span><span class="muted">Share of known defects caught</span></div><div class="lrow"><span>An indicative cost is only useful near a real one.</span><span>Compare Scale scenarios with supplier quotes for the same part.</span><span class="muted">Gap between indicative and quoted cost</span></div><div class="lrow key"><span>Time and money saved are not yet shown.</span><span>Compare one defined project step before and after Axis5, on the same product type, stage and quality bar.</span><span class="muted">People-hours spent waiting, coordinating and reworking × the team's loaded hourly cost, plus documented visualisation, prototype and quotation costs</span></div></div>
+    <div class="costs">
+      <div class="costs-head"><p class="mono mark">Where the cost builds up</p><p class="small muted">There is no measured rupee saving yet, so this names where the cost builds up instead of inventing a number. The last experiment above is how it would be measured.</p></div>
+      <ul class="chips"><li>Review and coordination hours</li><li>Redraws and re-renders</li><li>Outside visualisation</li><li>Repeated prototypes</li><li>Collecting and comparing quotes</li><li>Decisions waiting in a queue</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="sheet" id="tools" aria-labelledby="t4">
+  <div class="tb"><div class="no">AX5 · 09</div><div class="t">Beyond the core · Eleven more tools</div><div>Same project, same chat</div></div>
+  <div class="in">
+    <h2 id="t4">Eleven more tools in the same workspace</h2>
+    <p class="muted" style="max-width:66ch">Each tile opens the tool's full write-up, with screens from recorded sessions.</p>
+    <div class="tools">
+      <button type="button" class="tool" data-tool="studio-twin"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_twin.jpg" alt="Your Studio Twin: six learned sketches, a hand fingerprint at moderate confidence, and the style description" loading="lazy"></span><span class="tbody"><span class="h">Studio Twin</span><span class="p">Learns how a designer draws from their own sketches, so Enhance and Render come out in their hand.</span><span class="p why">AI help without losing the designer's hand.</span><span class="more mono">Watch it and read the write-up →</span></span></button><button type="button" class="tool" data-tool="package-check"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/package.jpg" alt="Measured package with sports-car bands" loading="lazy"></span><span class="tbody"><span class="h">Package Check</span><span class="p">Measures a vehicle sketch in wheel-diameter units against its class and places a seated occupant.</span><span class="p why">The package read at sketch stage, the cheapest point to fix it.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="render-styles"><span class="tthumb fit"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/b_render_marker.jpg" alt="The hatchback sketch as an orange digital marker render" loading="lazy"></span><span class="tbody"><span class="h">Render styles</span><span class="p">Realistic, or a locked studio style such as a marker render, with the design locked.</span><span class="p why">One idea in the language each review expects.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="scenario-builder"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_scene.jpg" alt="Hangar scene" loading="lazy"></span><span class="tbody"><span class="h">Scenario Builder</span><span class="p">Places a render into a scene from words, a preset or references, editable by message.</span><span class="p why">The design tested in its context of use.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="market-judgment"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_market.jpg" alt="Watch market judgment variant" loading="lazy"></span><span class="tbody"><span class="h">Market judgment</span><span class="p">How buyers will read a design and the price it commands, with levers to close the gap.</span><span class="p why">The price gap shows before engineering.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="technical-questions"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_tech.jpg" alt="Tooling cost estimate table" loading="lazy"></span><span class="tbody"><span class="h">Technical questions</span><span class="p">Manufacturing and engineering answers in context, with citations.</span><span class="p why">Days of waiting for an engineer, in minutes.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="text-to-cad"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_ttc.jpg" alt="Drone chassis from text" loading="lazy"></span><span class="tbody"><span class="h">Text to CAD</span><span class="p">A parametric part from one sentence, with every dimension editable.</span><span class="p why">A dimensioned start for designers without CAD.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="engineering-drawings"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_drawing.jpg" alt="Engineering drawing sheet" loading="lazy"></span><span class="tbody"><span class="h">Engineering drawings</span><span class="p">Views, section, dimensions and title block from a CAD part.</span><span class="p why">A first drawing for an RFQ the same day.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="sheet-metal-unfolding"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_unfold.jpg" alt="Sheet metal clip and flat pattern" loading="lazy"></span><span class="tbody"><span class="h">Sheet-metal unfolding</span><span class="p">A bent part unfolded to its flat pattern and a DXF with bend lines.</span><span class="p why">A cutting-ready blank for the fabricator.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="homologation-check"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_homolog.jpg" alt="Homologation failure modes" loading="lazy"></span><span class="tbody"><span class="h">Homologation check</span><span class="p">The applicable standard, a readiness score and the failure modes a test will probe.</span><span class="p why">Certification risk while the design can change.</span><span class="more mono">Read the full write-up →</span></span></button><button type="button" class="tool" data-tool="structural-check-fem"><span class="tthumb"><span class="xp" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><img src="img/t_fem.jpg" alt="FEM stress map" loading="lazy"></span><span class="tbody"><span class="h">Structural check (FEM)</span><span class="p">Stress and displacement on the CAD part under a load.</span><span class="p why">Weak spots before a prototype.</span><span class="more mono">Read the full write-up →</span></span></button>
+      <div class="cap"><p class="mono mark">And more</p><p class="h">47 capabilities in all</p><p class="p">Every tool works on the same project, so the brief, the sketch and the part travel with the designer.</p></div>
+    </div>
+    <div class="spec"><h3>Under the hood</h3><dl class="specs"><div><dt>Architecture</dt><dd>One orchestrator reads the request, the brief and the active design, picks one of 47 capabilities, and asks a question when the evidence is missing.</dd></div><div><dt>Three experts</dt><dd>Design, DFM and procurement personas answer in their own voice: the three experts of the launch video.</dd></div><div><dt>Engineering</dt><dd>FreeCAD, CalculiX and OpenSCAD compute from the geometry. The model explains the result; it does not invent the numbers.</dd></div><div><dt>Knowledge</dt><dd>12 product-category packs, including two-wheelers, four-wheelers and vehicle interiors, plus a manufacturing knowledge base and web search with sources.</dd></div><div><dt>Models</dt><dd>OpenAI, Anthropic and Google models through one gateway, with image and 3D generation alongside. Every call is traced.</dd></div><div><dt>Stack</dt><dd>React and TypeScript front end, FastAPI back end and Postgres, on AWS.</dd></div><div><dt>Guardrails</dt><dd>A pre-ship checklist built from real incidents. Costs are labelled indicative, meshes concept and market reads directional.</dd></div></dl></div>
+    <template id="d-studio-twin"><h3>Studio Twin</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> A designer uploads 3 to 15 of their own past sketches, or pastes a portfolio link. Axis5 studies them together and writes a description of their hand: line quality, stroke energy, shading habits and perspective. The designer reviews it and can edit it. Once it is confirmed, Enhance and Render lean toward that hand instead of a generic default.</p><p><b>Why it matters.</b> AI image tools pull every designer toward the same generic style. A designer's hand is part of their identity, and of their studio's visual language.</p><p><b>In the recording.</b> Built from six sketches, the Twin describes pressure-tapered, searching lines with overshoot at stroke ends, construction lines left visible, and a consistently wide-angle perspective. Project-specific motifs, such as a sharp headlamp gesture, are kept out of the core fingerprint. More sketches can be added to refine it.</p><p><b>Honest limits.</b> It is an approximation, not a clone. The fingerprint carries a confidence level, style strength varies per output, and nothing is used until the designer confirms the description. It can be edited, relearned or switched off at any time.</p></div><div class="apx-shots"><figure class="film"><video controls autoplay muted loop playsinline preload="metadata" poster="media/studio-twin.jpg" src="media/studio-twin.mp4" aria-label="Studio Twin: opening the learned profile, then adding more sketches"></video><figcaption class="muted small">Opening a Studio Twin built from six sketches, then adding more to refine it. Recorded on the live product.</figcaption></figure></div></div></template><template id="d-package-check"><h3>Package Check</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> For vehicle sketches, Axis5 measures proportions in wheel-diameter units, compares them with bands for the vehicle class, and places a seated occupant or rider. It reads side, front and rear views, and declines views it cannot measure.</p><p><b>Why it matters.</b> Proportion and occupant-package problems usually surface only in CAD or clay, after the form is committed.</p><p><b>Value in the journey.</b> A vehicle designer gets a measured package read at sketch stage, the cheapest point to fix it.</p><p><b>The designer stays in control of the occupant.</b> The manikin is editable. Its first placement stood almost upright through the roofline; dragging its joints into a proper seated driving posture, with the hip point low, the arms to the wheel and the legs to the pedals, showed whether the roofline and cabin actually fit a seated driver.</p><p class="muted small"><i>Demonstration sketch: motorsketch.blogspot.com.</i></p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_pkg_ask.jpg" alt="Before measuring, Axis5 asks what the vehicle is" loading="lazy"></button><figcaption>Before measuring, Axis5 asks what the vehicle is</figcaption></figure><figure class="shot"><button type="button"><img src="img/b_pkg.jpg" alt="The measured package: wheelbase, overhangs, windshield angle, ground clearance and a seated occupant, checked against sports-car bands" loading="lazy"></button><figcaption>The measured package: wheelbase, overhangs, windshield angle, ground clearance and a seated occupant, checked against sports-car bands</figcaption></figure><figure class="shot"><button type="button"><img src="img/b_posture.jpg" alt="The manikin as placed, and after the designer corrected its posture" loading="lazy"></button><figcaption>The manikin as placed, and after the designer corrected its posture</figcaption></figure></div></div></template><template id="d-render-styles"><h3>Render in different styles</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> Render turns a chosen design into a finished visual. Beyond a realistic render, vehicle sketches get a style library of locked studio styles: ink-and-wash storyboard, orange digital marker render, marker sketch-render, graphic flat illustration and a styling study sheet. The design is locked first, so the style changes and the design does not. Each style comes with a short note on how designers make it by hand.</p><p><b>Why it matters.</b> Designers present the same idea differently to different audiences: a marker render for a studio review, a storyboard to tell a story, a study sheet for detail. Producing each by hand takes hours.</p><p><b>Value in the journey.</b> One design can be shown in the visual language each review expects, and students learn the technique behind each style while they use it.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_render_picker.jpg" alt="The render style picker" loading="lazy"></button><figcaption>The render style picker</figcaption></figure><figure class="shot"><button type="button"><img src="img/b_render_marker.jpg" alt="The hatchback sketch as an orange digital marker render" loading="lazy"></button><figcaption>The hatchback sketch as an orange digital marker render</figcaption></figure></div></div></template><template id="d-scenario-builder"><h3>Scenario Builder</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> Scenario Builder places a finished render into a scene. The designer describes the setting in words, picks a preset or adds reference images, which are read for inspiration and never copied. Axis5 writes an editable scene brief covering setting, composition, light, people and mood before anything is generated. The scene can keep the render's look or take a painted or storyboard look. Axis5 checks the result and redraws it if the vehicle comes back mirrored or turned.</p><p><b>Why it matters.</b> A product is judged in its context of use: where it lives, who is around it, what light it is seen in. Building that scene usually means a separate visualisation job.</p><p><b>Value in the journey.</b> The designer can test and present the design in its intended context. Because the scene brief is editable, the scene follows the designer's intent rather than the model's guess.</p><p><b>In use.</b> Students often know the scene they want but not how to compose it. Scenario Builder guides the setting, camera angle and light, keeps the design itself unchanged, and lets the scene be edited by message: in the recording, a fighter plane was added to the hangar and the lighting adjusted with it. Designers use it to build portfolio renderings.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_scene_setup.jpg" alt="Scenario Builder: a preset, the designer&#x27;s own words or reference images, and a scene look" loading="lazy"></button><figcaption>Scenario Builder: a preset, the designer&#x27;s own words or reference images, and a scene look</figcaption></figure><figure class="shot"><button type="button"><img src="img/b_scene_night.jpg" alt="The render placed in a hangar at night, as a cinematic shape painting" loading="lazy"></button><figcaption>The render placed in a hangar at night, as a cinematic shape painting</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_scene_plane.jpg" alt="The same scene after one message: add a fighter plane in the background" loading="lazy"></button><figcaption>The same scene after one message: add a fighter plane in the background</figcaption></figure></div></div></template><template id="d-market-judgment"><h3>Market judgment</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> Before a design goes further, Axis5 reads how the market is likely to receive it. A few quick questions set the target buyer, price range and segment. Axis5 then states its working assumptions, which the designer can correct, and gives a verdict. It compares the price the designer wants with the price the design can command, scores how well the design fits each buyer segment, and names reference and cautionary products. Finally it proposes design levers. Each lever can be applied to the sketch on its own or all together, and the result is re-scored against the same segments.</p><p><b>In a recorded session.</b> A dress-watch sketch was aimed at luxury collectors at ₹2 to 5 lakh. Axis5's verdict: a credible high-end dress automatic that lacks a distinctive signature to stand out in a crowded premium segment. It judged that the design commands about ₹1.2 to 2.5 lakh, below the intended price. It proposed three levers: a guilloché or sunburst dial texture, a hobnail or coin-edge bezel signature, and an alligator strap. Applying all three raised the fit with entry-level collectors from 0.50 to 0.85, at the cost of fashion-forward professionals, which fell from 0.60 to 0.45. The revised sketch was then rendered.</p><p><b>Why it matters.</b> Designs are usually judged on appeal, not on whether the intended buyer would pay for them. A gap between what a design looks like and what it is priced at tends to show up only at launch, when it is expensive to fix.</p><p><b>Value in the journey.</b> The designer sees the price gap, and who the design actually serves, before investing in engineering. They can test what a design change does to buyer fit in minutes. The read is labelled directional: it rests on a category knowledge pack, live market sources and modelled buyer segments, not on sales data.</p><p class="muted small"><i>Demonstration sketch: a study of an existing dress watch.</i></p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_market_read.jpg" alt="Market read: editable assumptions, the verdict, and the gap between intended and achievable price" loading="lazy"></button><figcaption>Market read: editable assumptions, the verdict, and the gap between intended and achievable price</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_market_seg.jpg" alt="Buyer segments scored by fit, with the risk of buyers who admire it but will not buy" loading="lazy"></button><figcaption>Buyer segments scored by fit, with the risk of buyers who admire it but will not buy</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_market_levers.jpg" alt="Design levers, each with its effect and trade-off, ready to apply to the sketch" loading="lazy"></button><figcaption>Design levers, each with its effect and trade-off, ready to apply to the sketch</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_market_applied.jpg" alt="All three levers applied to the sketch, with the shift in fit for each buyer segment" loading="lazy"></button><figcaption>All three levers applied to the sketch, with the shift in fit for each buyer segment</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_market_render.jpg" alt="The revised watch rendered" loading="lazy"></button><figcaption>The revised watch rendered</figcaption></figure></div></div></template><template id="d-technical-questions"><h3>Technical and manufacturing questions</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> The designer can ask technical questions in plain language at any stage. Asked how to manufacture an air purifier, Axis5 searched and read sources. It then broke the product into subsystems, manufacturing steps, key components with their specifications, and the main cost drivers, with numbered citations. A follow-up gave a rough tooling-cost range for each moulded part, labelled as unsourced estimates, and explained how to get a real quote.</p><p><b>Why it matters.</b> Designers rarely have manufacturing knowledge on hand, and asking an engineer or supplier can take days.</p><p><b>Value in the journey.</b> Questions that would wait for an engineer's time are answered in context, with sources and honest labels. The designer reaches supplier conversations prepared.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_tech_parts.jpg" alt="How to manufacture the air purifier: components, functions and key specifications, with citations" loading="lazy"></button><figcaption>How to manufacture the air purifier: components, functions and key specifications, with citations</figcaption></figure><figure class="shot"><button type="button"><img src="img/b_tech_tooling.jpg" alt="A rough tooling-cost range per moulded part, labelled as unsourced estimates" loading="lazy"></button><figcaption>A rough tooling-cost range per moulded part, labelled as unsourced estimates</figcaption></figure></div></div></template><template id="d-text-to-cad"><h3>Text to CAD</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> A designer describes a part in one sentence, such as "generate a drone chassis", and Axis5 builds it as a parametric CAD model. Its dimensions become sliders, so arm length, thickness or hole spacing change instantly without another model call. Follow-up messages refine the part: in the recording, motors and propellers were added to the chassis, then the propellers were made smaller. If the generated model fails to build, Axis5 feeds the error back and fixes it automatically.</p><p><b>Why it matters.</b> Many designers think in form, not in CAD. A simple bracket or housing often waits for someone who can model it before anyone can check its size, fit or strength.</p><p><b>Value in the journey.</b> A designer gets a dimensioned, editable starting part in minutes, good enough to test proportions and to open a conversation with an engineer. It suits simple parts; complex surfaces still need a CAD modeller.</p><p class="muted small"><i>Both screens were recorded on an earlier version of the interface.</i></p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/b_ttc.jpg" alt="A drone chassis from one sentence, with 12 editable parameters" loading="lazy"></button><figcaption>A drone chassis from one sentence, with 12 editable parameters</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_ttc_motors.jpg" alt="Motors and propellers added by a follow-up message" loading="lazy"></button><figcaption>Motors and propellers added by a follow-up message</figcaption></figure></div></div></template><template id="d-engineering-drawings"><h3>Engineering drawings</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> From a selected CAD part, Axis5 produces an orthographic engineering drawing to the ASME Y14.3 convention, with the views, dimensions and notes the part needs. It works as a closed loop: FreeCAD projects the part's geometry once, a model plans which views, dimensions and notes to show, and a vision critic reviews each rendered sheet and corrects the layout, keeping the best-scoring version.</p><p><b>Why it matters.</b> A drawing is how a design is communicated to a supplier for quoting and to a toolmaker for manufacture. Producing one usually means a drafter's time and a queue, even when the designer only needs a first sheet to start a conversation.</p><p><b>Value in the journey.</b> A designer can send a dimensioned drawing with an RFQ or a design review the same day the part is modelled. It is a strong first draft for a drafter or engineer to check and complete, not a released drawing: tolerances and critical dimensions still need an engineer's sign-off.</p><p><b>In a recorded session.</b> A battery connector housing, identified as an injection-moulded part with 95% confidence, was turned into a one-sheet drawing from a single click on Generate Views. The sheet has top, front and right views in third-angle projection, a section A-A, an isometric view, dimensions in millimetres including radii and hole callouts, general notes and a title block, and is saved to the project tree beside the part.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/b_drawing.jpg" alt="The drawing sheet: three views, section A-A, isometric, notes and title block" loading="lazy"></button><figcaption>The drawing sheet: three views, section A-A, isometric, notes and title block</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_draw_tree.jpg" alt="The drawing saved in the project tree under the part, with the SVG in the outputs" loading="lazy"></button><figcaption>The drawing saved in the project tree under the part, with the SVG in the outputs</figcaption></figure></div></div></template><template id="d-sheet-metal-unfolding"><h3>Sheet-metal unfolding</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> For a bent sheet-metal part, Axis5 unfolds the 3D model into its flat pattern in one step. It finds the bends and the material thickness, calculates the bend allowance with a K-factor suited to the material, and produces a flat-pattern model with its flat dimensions and a DXF with the bend lines marked, ready for laser cutting or punching. The flat pattern opens in the 3D viewer and is saved to the project. If the part is not sheet metal, or no bends can be found, Axis5 says so rather than producing a wrong pattern.</p><p><b>Why it matters.</b> A bracket, enclosure or chassis panel is cut flat and then bent, so the supplier needs the flat blank, not the 3D shape. Getting it right means accounting for how the material stretches at each bend; get it wrong and the bent part comes out the wrong size.</p><p><b>Value in the journey.</b> A designer can check that a sheet-metal part unfolds cleanly and hand a cutting-ready DXF to a fabricator without a separate CAD seat or an engineer's time. It works best on parts of uniform thickness; complex intersecting bends may still need a CAD modeller.</p><p><b>In a recorded session.</b> A STEP file of a small bent clip was loaded and identified as a sheet-metal retaining clip with 95% confidence, from its uniform thickness, bend radii and punched slots. One click on Unfold Part produced the flat pattern, loaded it in the 3D viewer and saved it to the project tree beside the part.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/b_unfold.jpg" alt="The bent retaining clip, its unfolded flat pattern, and the confirmation in chat" loading="lazy"></button><figcaption>The bent retaining clip, its unfolded flat pattern, and the confirmation in chat</figcaption></figure></div></div></template><template id="d-homologation-check"><h3>Homologation check</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> From a CAD part, a sketch or a render, Axis5 identifies the component, infers its market and use, and assesses its regulatory readiness. It names the applicable standard and certification body and gives a readiness score. It then explains the component's structural and functional role, the geometry observations behind the reading, a domain-specific analysis, and the failure modes a certification test is likely to probe, such as structural collapse in a crush test, with the expected result.</p><p><b>Why it matters.</b> Certification requirements usually surface late, when a part reaches testing or an approval body, and a failed test can send a design back to the start. Designers rarely know which standards apply to a part, let alone what the tests will do to it.</p><p><b>Value in the journey.</b> The designer sees which rules a part will be judged against, and where it is likely to fail, while the design can still change. It is a readiness read to guide the design and the conversation with a certification engineer, not a compliance verdict.</p><p class="muted small"><i>Recorded on an earlier version of the interface, upscaled from a low-resolution recording.</i></p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/b_homolog.jpg" alt="Domain-specific analysis and the failure modes a certification test is likely to probe" loading="lazy"></button><figcaption>Domain-specific analysis and the failure modes a certification test is likely to probe</figcaption></figure></div></div></template><template id="d-structural-check-fem"><h3>Structural check (FEM)</h3><div class="apx-body"><div class="prose"><p><b>What it does.</b> On the same CAD part, the designer picks a material from a library, clicks the faces that are held fixed, and applies a force, pressure or gravity. Axis5 meshes the part, runs a finite element analysis, and maps stress and displacement on the 3D model. A slider exaggerates the deformation so the bending can be seen.</p><p><b>Why it matters.</b> Whether a part will hold is usually a question for a simulation specialist, asked after the design is set. A designer rarely sees where a part is weak while there is still time to change it.</p><p><b>Value in the journey.</b> Weak spots show up while the form can still change, and "can it be made?" and "will it hold?" are answered on the same part. It is a first check, not validation: it handles linear, static loads only, and its results need an engineer's review.</p><p class="muted small"><i>Both screens were recorded on an earlier version of the interface.</i></p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/b_fem.jpg" alt="Stress map on a flanged bushing, with fixed faces and the load set up" loading="lazy"></button><figcaption>Stress map on a flanged bushing, with fixed faces and the load set up</figcaption></figure><figure class="shot"><button type="button"><img src="img/a_fem_disp.jpg" alt="Displacement map, with the deformation exaggerated" loading="lazy"></button><figcaption>Displacement map, with the deformation exaggerated</figcaption></figure></div></div></template><template id="d-cmf"><h3>CMF: why Axis5 is good at it</h3><div class="apx-body"><div class="prose"><ul class="checks yes"><li><b>The form stays locked.</b> The CMF pass runs on top of the corrected drawing, so colour and finish change without the shape or viewpoint drifting.</li><li><b>Directions are researched, not invented.</b> Trend directions for 12 product categories are gathered from design publications such as Lémanoosh, Yanko Design and Designboom, structured, and reviewed by a person before they go live.</li><li><b>Every direction is grounded in supply.</b> Each carries a note on how readily its materials and finishes can be sourced in India, such as matte powder coat from two-wheeler suppliers.</li><li><b>The designer stays in control.</b> Descriptors can be edited before anything is applied, and a reference image lends only its colour, material and finish, never its form.</li><li><b>Claims stay honest.</b> Where no dated source supports a direction, as with car interiors, it is labelled a general direction rather than the latest trend.</li></ul><p><b>Value in the journey.</b> A designer can compare several CMF directions on the same form in minutes. They reach production conversations with finishes that are both current and sourceable.</p></div><div class="apx-shots"><figure class="shot"><button type="button"><img src="img/a_cmf_trends.jpg" alt="2026 trend directions, each with colour, material and finish descriptors" loading="lazy"></button><figcaption>2026 trend directions, each with colour, material and finish descriptors</figcaption></figure><figure class="shot"><button type="button"><img src="img/hp_render.jpg" alt="The headphone sketch rendered in the Warm Minimalism 2026 direction" loading="lazy"></button><figcaption>The headphone sketch rendered in the Warm Minimalism 2026 direction</figcaption></figure></div></div></template>
+  </div>
+</section>
+
+<!-- BRING -->
+<section class="sheet" aria-labelledby="t8">
+  <div class="tb"><div class="no">AX5 · 10</div><div class="t">How I work</div><div>Samarjitsinh Waghela</div></div>
+  <div class="in">
+    <h2 id="t8">Three habits behind this work</h2>
+    <p class="lede" style="max-width:62ch">Looking back over Yulu and Axis5, the same three habits keep showing up. Each one points to where it appears on this page.</p>
+    <div class="habits"><div class="habit"><p class="mono mark">01</p><h3>Start where the cost lands</h3><p>Most problems I have worked on were found late, by someone downstream. I start where that cost lands and trace it back to the decision that caused it.</p><p class="seen"><span class="mono">Seen in</span>Water in the Miracle 2 floorboard, the battery bucket, the sketch-to-vendor gap. <span class="jump"><a href="#t1">The problem</a> · <a href="#t2">My role</a> ↑</span></p></div><div class="habit"><p class="mono mark">02</p><h3>Build something people can test</h3><p>I would rather put a rough working version in front of people than a polished concept. Real use shows what a screen hides.</p><p class="seen"><span class="mono">Seen in</span>Axis5, first built with AI-assisted coding and refined in college workshops; the phone holder below. <span class="jump"><a href="#t3">The nine steps</a> ↑</span></p></div><div class="habit"><p class="mono mark">03</p><h3>Say what is not proven</h3><p>I report the limits as plainly as the results, and turn each gap into a test.</p><p class="seen"><span class="mono">Seen in</span>The six calls that changed course, and the experiments set against each open question. <span class="jump"><a href="#tj">Six calls</a> · <a href="#t7">Still unproven</a> ↑</span></p></div></div>
+    <div class="split">
+      <div class="card"><p class="mono">Before Axis5</p><p style="font-size:15px">On Yulu's shared EVs, the off-the-shelf phone holders we bought at ₹500 broke within weeks, and riders skipped vehicles without one. The team treated it as a sourcing problem. I treated it as a product problem, because no holder on the market was built for round-the-clock outdoor shared use. After three prototype rounds, we shipped a holder that outlasted every off-the-shelf option at <b>₹477</b> a unit, under the original cap.</p></div>
+      <p class="quote" style="align-self:center">With a new team, I would start by learning how decisions are made today, and only then decide what to build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section class="sheet summary" aria-labelledby="t11">
+  <div class="tb"><div class="no">AX5 · 11</div><div class="t">In one line</div><div>From the first sketch</div></div>
+  <div class="in">
+    <h2 id="t11">Close the gap between design and manufacturing, <span class="mark">from the first sketch</span></h2>
+    <div class="sum3">
+      <div><p class="mono">The gap</p><p>Manufacturing knowledge arrives weeks after the form is fixed, at the vendor, where every change becomes rework.</p></div>
+      <div><p class="mono">What Axis5 does</p><p>It brings the designer, the senior engineer and the procurement expert to the sketch. Critique, parts, DFM, cost and quotes happen in one project, while a change still costs a redraw.</p></div>
+      <div><p class="mono">Where it stands</p><p>58 people have used it. On a real Yulu part with known sink marks, the DFM check flagged the problem, and the team now checks new plastic parts first. Its effect on time and quality is not yet measured.</p></div>
+    </div>
+    <p class="quote">Three experts. One workspace. From a first sketch to a manufacturing decision.</p>
+    <figure class="film" id="launch"><video controls preload="none" playsinline poster="media/axis5-launch.jpg" src="media/axis5-launch.mp4" aria-label="Axis5 launch video, 1 minute 56 seconds"></video><figcaption class="muted small">The Axis5 launch video, 1:56, with sound. Every screen is a recording of the live product.</figcaption></figure>
+  </div>
+</section>
+
+<footer class="mono muted"><span>Axis5 · Samarjitsinh Waghela · Bengaluru</span><span>Screens recorded on the live product, Nov 2026</span></footer>
+</div>
+
+<dialog id="tooldlg" aria-label="Tool in detail"><div class="dlg-head"><span class="mono mark">Tool in detail</span><button type="button" class="dlg-x">Close ✕</button></div><div class="dlg-body"></div></dialog>
+<dialog id="lb" aria-label="Enlarged screenshot"><img alt=""><p></p></dialog>
+<script>
+(function(){
+  // "Prepared for …" line from a link ending in #for-Company-Name
+  var m=/^#for-([A-Za-z0-9-]{1,60})$/.exec(location.hash), f=document.getElementById('for');
+  if(m){ f.querySelector('span').textContent=m[1].replace(/-+/g,' '); f.hidden=false; }
+  var lb=document.getElementById('lb'), img=lb.querySelector('img'), cap=lb.querySelector('p');
+  var dlg=document.getElementById('tooldlg'), body=dlg.querySelector('.dlg-body');
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-tool]');
+    if(t){ var tp=document.getElementById('d-'+t.dataset.tool); if(!tp) return;
+      body.replaceChildren(tp.content.cloneNode(true)); try{dlg.showModal()}catch(_){} dlg.scrollTop=0; return; }
+    var b=e.target.closest('.shot button'); if(!b) return;
+    var i=b.querySelector('img'); img.src=i.src; img.alt=i.alt; cap.textContent=i.alt;
+    try{lb.showModal()}catch(_){}
+  });
+  dlg.querySelector('.dlg-x').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+  dlg.addEventListener('close',function(){ body.replaceChildren(); });
+  lb.addEventListener('click',function(){lb.close()});
+})();
+</script>
+
+</body>
+</html>
